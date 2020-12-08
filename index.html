@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#000000" />
+<title>
+SON
+</title>
+<style type="text/css">
+	audio{
+		display: block;
+	}
+	#container{
+	height: 80vh;
+	display: grid;
+  	grid-template-columns: repeat(3, 1fr);
+  	grid-gap: 10px;
+  	grid-auto-rows: minmax(100px, auto);
+
+	}
+
+	#boite1{
+		background-color: red;
+	}
+	#boite1:hover{
+		background-color: blue;
+	}
+	#boite2{
+		background-color: #69f589;
+	}
+	#boite2:hover{
+		background-color: blue;
+	}
+	#boite3{
+		background-color: yellow;
+	}
+	#boite3:hover{
+		background-color: blue;
+	}
+</style>
+</head>
+<body style="background-color: pink;">
+
+<!-- <h4>Radio 1</h4>
+<audio src="http://5.79.86.14:8247/;?listening-from-radio-garden=1607440451831" controls></audio>
+
+<h4>Radio 2</h4>
+<audio src="http://192.187.116.210:9994/;stream.mp3?listening-from-radio-garden=1607440551194" controls></audio>
+
+<h4>Radio 3</h4>
+<audio src="http://streamingcwsradio30.com:8036/;?listening-from-radio-garden=1607440633552" controls></audio> -->
+
+<audio id="audio1" src="http://streamingcwsradio30.com:8036/;?listening-from-radio-garden=1607440633552"></audio>
+
+
+<audio id="audio2" src="http://192.187.116.210:9994/;stream.mp3?listening-from-radio-garden=1607440551194"></audio>
+
+<audio id="audio3" src="http://5.79.86.14:8247/;?listening-from-radio-garden=1607440451831"></audio>
+
+<div id="container">
+	<div id="boite1"></div>
+	<div id="boite2"></div>
+	<div id="boite3"></div>
+</div>
+
+<script type="text/javascript">
+	document.getElementById('boite1').onmouseenter = function() {
+		document.getElementById('audio1').play()
+	}
+		document.getElementById('boite1').onmouseleave = function() {
+		document.getElementById('audio1').pause()	
+	}
+
+		document.getElementById('boite2').onmouseenter = function() {
+		document.getElementById('audio2').play()
+	}
+		document.getElementById('boite2').onmouseleave = function() {
+		document.getElementById('audio2').pause()	
+	}
+
+		document.getElementById('boite3').onmouseenter = function() {
+		document.getElementById('audio3').play()
+	}
+		document.getElementById('boite3').onmouseleave = function() {
+		document.getElementById('audio3').pause()	
+	}
+
+// <!-- OAXACA -->
+
+// <!-- http://5.79.86.14:8247/;?listening-from-radio-garden=1607440451831 -->
+
+// <!-- http://192.187.116.210:9994/;stream.mp3?listening-from-radio-garden=1607440551194 -->
+
+// <!-- OTROS -->
+
+// <!-- http://streamingcwsradio30.com:8036/;?listening-from-radio-garden=1607440633552 -->
+</script>
+</body>
+</html>
